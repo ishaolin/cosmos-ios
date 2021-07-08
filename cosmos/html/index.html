@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>测试</title>
+        <style type="text/css">
+            .button {
+                margin-left: 10px;
+                margin-top: 15px;
+                line-height: 1.5;
+                position: relative;
+                font-size: 15px;
+                font-weight: 400;
+                text-align: center;
+                height: 32px;
+                padding: 0 15px;
+                border-radius: 4px;
+                color: #FFF;
+                background-color: #FF5A44;
+                border-color: #FF5A44;
+            }
+        </style>
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+        <button type="button" class="button" onclick="openNewPageForBaidu();">打开百度</button>
+        <button type="button" class="button" onclick="share('wechat');">微信分享</button>
+        <button type="button" class="button" onclick="share('wechat_timeline');">微信朋友圈</button>
+        <button type="button" class="button" onclick="share('alipay');">支付宝好友</button>
+        <button type="button" class="button" onclick="share('alipay_timeline');">生活圈分享</button>
+        <button type="button" class="button" onclick="share('qq');">QQ分享</button>
+        <button type="button" class="button" onclick="share('qq_zone');">QQ空间分享</button>
+        <button type="button" class="button" onclick="share('sms');">短信分享</button>
+        <button type="button" class="button" onclick="share('sina_weibo');">微博分享</button>
+        <button type="button" class="button" onclick="imagePicker();">选择图片</button>
+        <button type="button" class="button" onclick="showAlert();">Alert</button>
+        <button type="button" class="button" onclick="showActionSheet();">ActionSheet</button>
+        <button type="button" class="button" onclick="callPhone();">拨打电话</button>
+        <button type="button" class="button" onclick="callNative('closePage');">关闭页面</button>
+        <button type="button" class="button" onclick="scanCode();">扫码</button>
+        <button type="button" class="button" onclick="getParamsSignature();">参数签名</button>
+        <button type="button" class="button" onclick="setPageTitle();">设置标题</button>
+    </body>
+</html>

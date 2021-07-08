@@ -1,0 +1,544 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9910B3BE26931867005E1800 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9910B3BD26931867005E1800 /* Assets.xcassets */; };
+		9910B3C126931867005E1800 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9910B3BF26931867005E1800 /* LaunchScreen.storyboard */; };
+		9910B3C426931867005E1800 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9910B3C326931867005E1800 /* main.m */; };
+		9910B3DD26931955005E1800 /* CMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9910B3CC26931955005E1800 /* CMHomeViewController.m */; };
+		9910B3DE26931955005E1800 /* CMSchemeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9910B3CD26931955005E1800 /* CMSchemeHandler.m */; };
+		9910B3DF26931955005E1800 /* CMLocalHTMLController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9910B3CE26931955005E1800 /* CMLocalHTMLController.m */; };
+		9910B3E126931956005E1800 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 9910B3D326931955005E1800 /* index.html */; };
+		9910B3E226931956005E1800 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 9910B3D426931955005E1800 /* script.js */; };
+		9910B3E326931956005E1800 /* CMSceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9910B3D626931955005E1800 /* CMSceneDelegate.m */; };
+		9910B3E426931956005E1800 /* CMSchemeModuleRegistrar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9910B3D726931955005E1800 /* CMSchemeModuleRegistrar.m */; };
+		9910B3E526931956005E1800 /* CMWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9910B3D926931955005E1800 /* CMWebViewController.m */; };
+		9910B3E626931956005E1800 /* CMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9910B3DA26931955005E1800 /* CMAppDelegate.m */; };
+		9910B3E9269329AA005E1800 /* CMBaseURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9910B3E8269329AA005E1800 /* CMBaseURLRequest.m */; };
+		9910B3EC269329CB005E1800 /* CMVerifyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9910B3EB269329CB005E1800 /* CMVerifyRequest.m */; };
+		9910B3F4269430C8005E1800 /* CMSharedPayHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9910B3F3269430C8005E1800 /* CMSharedPayHandler.m */; };
+		9910B3FD26944C03005E1800 /* CMOpenSDKDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9910B3FC26944C03005E1800 /* CMOpenSDKDelegate.m */; };
+		9910B40026948A14005E1800 /* CMScanAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9910B3FF26948A14005E1800 /* CMScanAnimationView.m */; };
+		9910B40626948AAE005E1800 /* cm_code_scan_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9910B40226948AAE005E1800 /* cm_code_scan_line@2x.png */; };
+		9910B40726948AAE005E1800 /* cm_code_scan_box@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9910B40326948AAE005E1800 /* cm_code_scan_box@2x.png */; };
+		9910B40826948AAE005E1800 /* cm_code_scan_box@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9910B40426948AAE005E1800 /* cm_code_scan_box@3x.png */; };
+		9910B40926948AAE005E1800 /* cm_code_scan_line@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9910B40526948AAE005E1800 /* cm_code_scan_line@3x.png */; };
+		9910B40C26948B02005E1800 /* CMScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9910B40B26948B02005E1800 /* CMScanViewController.m */; };
+		9910B40F26948B49005E1800 /* CMScanPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9910B40E26948B49005E1800 /* CMScanPickerController.m */; };
+		9910B4182694ADAE005E1800 /* CMURLRequestParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 9910B4172694ADAE005E1800 /* CMURLRequestParams.m */; };
+		C6C40E85596C922EACB35F4B /* libPods-cosmos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9AA3C870E72746188DBD8AF /* libPods-cosmos.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2F8F3298ECF634BD87E87A51 /* Pods-cosmos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cosmos.release.xcconfig"; path = "Target Support Files/Pods-cosmos/Pods-cosmos.release.xcconfig"; sourceTree = "<group>"; };
+		9910B3AE26931862005E1800 /* cosmos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cosmos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9910B3BD26931867005E1800 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9910B3C026931867005E1800 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9910B3C226931867005E1800 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9910B3C326931867005E1800 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9910B3CA26931955005E1800 /* CMSchemeModuleRegistrar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMSchemeModuleRegistrar.h; sourceTree = "<group>"; };
+		9910B3CB26931955005E1800 /* CMSchemeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMSchemeHandler.h; sourceTree = "<group>"; };
+		9910B3CC26931955005E1800 /* CMHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHomeViewController.m; sourceTree = "<group>"; };
+		9910B3CD26931955005E1800 /* CMSchemeHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMSchemeHandler.m; sourceTree = "<group>"; };
+		9910B3CE26931955005E1800 /* CMLocalHTMLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMLocalHTMLController.m; sourceTree = "<group>"; };
+		9910B3D026931955005E1800 /* CMLocalHTMLController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMLocalHTMLController.h; sourceTree = "<group>"; };
+		9910B3D326931955005E1800 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		9910B3D426931955005E1800 /* script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		9910B3D526931955005E1800 /* CMHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHomeViewController.h; sourceTree = "<group>"; };
+		9910B3D626931955005E1800 /* CMSceneDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMSceneDelegate.m; sourceTree = "<group>"; };
+		9910B3D726931955005E1800 /* CMSchemeModuleRegistrar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMSchemeModuleRegistrar.m; sourceTree = "<group>"; };
+		9910B3D826931955005E1800 /* CMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMAppDelegate.h; sourceTree = "<group>"; };
+		9910B3D926931955005E1800 /* CMWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMWebViewController.m; sourceTree = "<group>"; };
+		9910B3DA26931955005E1800 /* CMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMAppDelegate.m; sourceTree = "<group>"; };
+		9910B3DB26931955005E1800 /* CMSceneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMSceneDelegate.h; sourceTree = "<group>"; };
+		9910B3DC26931955005E1800 /* CMWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMWebViewController.h; sourceTree = "<group>"; };
+		9910B3E7269329AA005E1800 /* CMBaseURLRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMBaseURLRequest.h; sourceTree = "<group>"; };
+		9910B3E8269329AA005E1800 /* CMBaseURLRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMBaseURLRequest.m; sourceTree = "<group>"; };
+		9910B3EA269329CB005E1800 /* CMVerifyRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMVerifyRequest.h; sourceTree = "<group>"; };
+		9910B3EB269329CB005E1800 /* CMVerifyRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMVerifyRequest.m; sourceTree = "<group>"; };
+		9910B3ED26937D96005E1800 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		9910B3F2269430C8005E1800 /* CMSharedPayHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMSharedPayHandler.h; sourceTree = "<group>"; };
+		9910B3F3269430C8005E1800 /* CMSharedPayHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMSharedPayHandler.m; sourceTree = "<group>"; };
+		9910B3FB26944C03005E1800 /* CMOpenSDKDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMOpenSDKDelegate.h; sourceTree = "<group>"; };
+		9910B3FC26944C03005E1800 /* CMOpenSDKDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMOpenSDKDelegate.m; sourceTree = "<group>"; };
+		9910B3FE26948A14005E1800 /* CMScanAnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMScanAnimationView.h; sourceTree = "<group>"; };
+		9910B3FF26948A14005E1800 /* CMScanAnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMScanAnimationView.m; sourceTree = "<group>"; };
+		9910B40226948AAE005E1800 /* cm_code_scan_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm_code_scan_line@2x.png"; sourceTree = "<group>"; };
+		9910B40326948AAE005E1800 /* cm_code_scan_box@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm_code_scan_box@2x.png"; sourceTree = "<group>"; };
+		9910B40426948AAE005E1800 /* cm_code_scan_box@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm_code_scan_box@3x.png"; sourceTree = "<group>"; };
+		9910B40526948AAE005E1800 /* cm_code_scan_line@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm_code_scan_line@3x.png"; sourceTree = "<group>"; };
+		9910B40A26948B02005E1800 /* CMScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMScanViewController.h; sourceTree = "<group>"; };
+		9910B40B26948B02005E1800 /* CMScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMScanViewController.m; sourceTree = "<group>"; };
+		9910B40D26948B49005E1800 /* CMScanPickerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMScanPickerController.h; sourceTree = "<group>"; };
+		9910B40E26948B49005E1800 /* CMScanPickerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMScanPickerController.m; sourceTree = "<group>"; };
+		9910B4162694ADAE005E1800 /* CMURLRequestParams.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMURLRequestParams.h; sourceTree = "<group>"; };
+		9910B4172694ADAE005E1800 /* CMURLRequestParams.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMURLRequestParams.m; sourceTree = "<group>"; };
+		D94D3A6B915747A918BF2DAF /* Pods-cosmos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cosmos.debug.xcconfig"; path = "Target Support Files/Pods-cosmos/Pods-cosmos.debug.xcconfig"; sourceTree = "<group>"; };
+		F9AA3C870E72746188DBD8AF /* libPods-cosmos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cosmos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9910B3AB26931862005E1800 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6C40E85596C922EACB35F4B /* libPods-cosmos.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		978089129851C3B785D95688 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D94D3A6B915747A918BF2DAF /* Pods-cosmos.debug.xcconfig */,
+				2F8F3298ECF634BD87E87A51 /* Pods-cosmos.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9910B3A526931862005E1800 = {
+			isa = PBXGroup;
+			children = (
+				9910B3B026931862005E1800 /* cosmos */,
+				9910B3AF26931862005E1800 /* Products */,
+				978089129851C3B785D95688 /* Pods */,
+				E83975E0582E747A93A63FD2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9910B3AF26931862005E1800 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9910B3AE26931862005E1800 /* cosmos.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9910B3B026931862005E1800 /* cosmos */ = {
+			isa = PBXGroup;
+			children = (
+				9910B40126948AAE005E1800 /* Assets */,
+				9910B3D826931955005E1800 /* CMAppDelegate.h */,
+				9910B3DA26931955005E1800 /* CMAppDelegate.m */,
+				9910B3D026931955005E1800 /* CMLocalHTMLController.h */,
+				9910B3CE26931955005E1800 /* CMLocalHTMLController.m */,
+				9910B3D526931955005E1800 /* CMHomeViewController.h */,
+				9910B3CC26931955005E1800 /* CMHomeViewController.m */,
+				9910B3DB26931955005E1800 /* CMSceneDelegate.h */,
+				9910B3D626931955005E1800 /* CMSceneDelegate.m */,
+				9910B3CB26931955005E1800 /* CMSchemeHandler.h */,
+				9910B3CD26931955005E1800 /* CMSchemeHandler.m */,
+				9910B3CA26931955005E1800 /* CMSchemeModuleRegistrar.h */,
+				9910B3D726931955005E1800 /* CMSchemeModuleRegistrar.m */,
+				9910B3DC26931955005E1800 /* CMWebViewController.h */,
+				9910B3D926931955005E1800 /* CMWebViewController.m */,
+				9910B3D226931955005E1800 /* html */,
+				9910B3BD26931867005E1800 /* Assets.xcassets */,
+				9910B3BF26931867005E1800 /* LaunchScreen.storyboard */,
+				9910B3C226931867005E1800 /* Info.plist */,
+				9910B3C326931867005E1800 /* main.m */,
+				9910B3E7269329AA005E1800 /* CMBaseURLRequest.h */,
+				9910B3E8269329AA005E1800 /* CMBaseURLRequest.m */,
+				9910B3EA269329CB005E1800 /* CMVerifyRequest.h */,
+				9910B3EB269329CB005E1800 /* CMVerifyRequest.m */,
+				9910B3F2269430C8005E1800 /* CMSharedPayHandler.h */,
+				9910B3F3269430C8005E1800 /* CMSharedPayHandler.m */,
+				9910B3FB26944C03005E1800 /* CMOpenSDKDelegate.h */,
+				9910B3FC26944C03005E1800 /* CMOpenSDKDelegate.m */,
+				9910B3FE26948A14005E1800 /* CMScanAnimationView.h */,
+				9910B3FF26948A14005E1800 /* CMScanAnimationView.m */,
+				9910B40A26948B02005E1800 /* CMScanViewController.h */,
+				9910B40B26948B02005E1800 /* CMScanViewController.m */,
+				9910B40D26948B49005E1800 /* CMScanPickerController.h */,
+				9910B40E26948B49005E1800 /* CMScanPickerController.m */,
+				9910B4162694ADAE005E1800 /* CMURLRequestParams.h */,
+				9910B4172694ADAE005E1800 /* CMURLRequestParams.m */,
+			);
+			path = cosmos;
+			sourceTree = "<group>";
+		};
+		9910B3D226931955005E1800 /* html */ = {
+			isa = PBXGroup;
+			children = (
+				9910B3D326931955005E1800 /* index.html */,
+				9910B3D426931955005E1800 /* script.js */,
+			);
+			path = html;
+			sourceTree = "<group>";
+		};
+		9910B40126948AAE005E1800 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				9910B40226948AAE005E1800 /* cm_code_scan_line@2x.png */,
+				9910B40326948AAE005E1800 /* cm_code_scan_box@2x.png */,
+				9910B40426948AAE005E1800 /* cm_code_scan_box@3x.png */,
+				9910B40526948AAE005E1800 /* cm_code_scan_line@3x.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		E83975E0582E747A93A63FD2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9AA3C870E72746188DBD8AF /* libPods-cosmos.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9910B3AD26931862005E1800 /* cosmos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9910B3C726931867005E1800 /* Build configuration list for PBXNativeTarget "cosmos" */;
+			buildPhases = (
+				405CD36AE790FD4FBC5F8076 /* [CP] Check Pods Manifest.lock */,
+				9910B3AA26931862005E1800 /* Sources */,
+				9910B3AB26931862005E1800 /* Frameworks */,
+				9910B3AC26931862005E1800 /* Resources */,
+				CA0F11F22750BC692590DBE5 /* [CP] Embed Pods Frameworks */,
+				87E788ECE11F77E564A5680B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cosmos;
+			productName = cosmos;
+			productReference = 9910B3AE26931862005E1800 /* cosmos.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9910B3A626931862005E1800 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					9910B3AD26931862005E1800 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = 9910B3A926931862005E1800 /* Build configuration list for PBXProject "cosmos" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = 9910B3A526931862005E1800;
+			productRefGroup = 9910B3AF26931862005E1800 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9910B3AD26931862005E1800 /* cosmos */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9910B3AC26931862005E1800 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9910B40726948AAE005E1800 /* cm_code_scan_box@2x.png in Resources */,
+				9910B40826948AAE005E1800 /* cm_code_scan_box@3x.png in Resources */,
+				9910B3E126931956005E1800 /* index.html in Resources */,
+				9910B40926948AAE005E1800 /* cm_code_scan_line@3x.png in Resources */,
+				9910B40626948AAE005E1800 /* cm_code_scan_line@2x.png in Resources */,
+				9910B3E226931956005E1800 /* script.js in Resources */,
+				9910B3C126931867005E1800 /* LaunchScreen.storyboard in Resources */,
+				9910B3BE26931867005E1800 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		405CD36AE790FD4FBC5F8076 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-cosmos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87E788ECE11F77E564A5680B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cosmos/Pods-cosmos-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cosmos/Pods-cosmos-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-cosmos/Pods-cosmos-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA0F11F22750BC692590DBE5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cosmos/Pods-cosmos-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cosmos/Pods-cosmos-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-cosmos/Pods-cosmos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9910B3AA26931862005E1800 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9910B3F4269430C8005E1800 /* CMSharedPayHandler.m in Sources */,
+				9910B4182694ADAE005E1800 /* CMURLRequestParams.m in Sources */,
+				9910B40C26948B02005E1800 /* CMScanViewController.m in Sources */,
+				9910B40F26948B49005E1800 /* CMScanPickerController.m in Sources */,
+				9910B3DF26931955005E1800 /* CMLocalHTMLController.m in Sources */,
+				9910B3E426931956005E1800 /* CMSchemeModuleRegistrar.m in Sources */,
+				9910B3C426931867005E1800 /* main.m in Sources */,
+				9910B3E526931956005E1800 /* CMWebViewController.m in Sources */,
+				9910B3E9269329AA005E1800 /* CMBaseURLRequest.m in Sources */,
+				9910B3EC269329CB005E1800 /* CMVerifyRequest.m in Sources */,
+				9910B3E326931956005E1800 /* CMSceneDelegate.m in Sources */,
+				9910B40026948A14005E1800 /* CMScanAnimationView.m in Sources */,
+				9910B3DE26931955005E1800 /* CMSchemeHandler.m in Sources */,
+				9910B3FD26944C03005E1800 /* CMOpenSDKDelegate.m in Sources */,
+				9910B3DD26931955005E1800 /* CMHomeViewController.m in Sources */,
+				9910B3E626931956005E1800 /* CMAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9910B3BF26931867005E1800 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9910B3C026931867005E1800 /* Base */,
+				9910B3ED26937D96005E1800 /* zh-Hans */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9910B3C526931867005E1800 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9910B3C626931867005E1800 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9910B3C826931867005E1800 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D94D3A6B915747A918BF2DAF /* Pods-cosmos.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7XQ533L8PG;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = cosmos/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.study.cosmos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		9910B3C926931867005E1800 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F8F3298ECF634BD87E87A51 /* Pods-cosmos.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7XQ533L8PG;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = cosmos/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.study.cosmos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9910B3A926931862005E1800 /* Build configuration list for PBXProject "cosmos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9910B3C526931867005E1800 /* Debug */,
+				9910B3C626931867005E1800 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9910B3C726931867005E1800 /* Build configuration list for PBXNativeTarget "cosmos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9910B3C826931867005E1800 /* Debug */,
+				9910B3C926931867005E1800 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9910B3A626931862005E1800 /* Project object */;
+}
