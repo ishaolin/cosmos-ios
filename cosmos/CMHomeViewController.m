@@ -8,8 +8,10 @@
 #import "CMHomeViewController.h"
 #import "CMLocalHTMLController.h"
 #import "CMVerifyRequest.h"
+#import <CXAssetsPicker/CXAssetsPicker.h>
+#import "CMSchemeHandler.h"
 
-@interface CMHomeViewController () {
+@interface CMHomeViewController ()<UINavigationControllerDelegate, CXAssetsPickerControllerDelegate>{
     
 }
 
@@ -21,6 +23,8 @@
     [super viewDidLoad];
     
     self.title = @"首页";
+    
+    self.navigationBar.navigationItem.rightBarButtonItem = [[CXBarButtonItem alloc] initWithTitle:@"设置" target:self action:@selector(didClickSettingButtonItem:)];
     
     UIButton *openButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [openButton setBackgroundColor:[UIColor colorWithWhite:0.8 alpha:1.0]];
@@ -51,6 +55,21 @@
     verifyButton.frame = (CGRect){verifyButton_X, verifyButton_Y, verifyButton_W, verifyButton_H};
     
     [self.view addSubview:verifyButton];
+    
+    UIButton *assetsButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [assetsButton setBackgroundColor:[UIColor colorWithWhite:0.8 alpha:1.0]];
+    [assetsButton setTitle:@"选择图片" forState:UIControlStateNormal];
+    [assetsButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [assetsButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+    [assetsButton addTarget:self action:@selector(didClickAssetsPickerButton:) forControlEvents:UIControlEventTouchUpInside];
+    
+    CGFloat assetsButton_W = verifyButton_W;
+    CGFloat assetsButton_H = verifyButton_H;
+    CGFloat assetsButton_X = verifyButton_X;
+    CGFloat assetsButton_Y = CGRectGetMaxY(verifyButton.frame) + 20.0;
+    assetsButton.frame = (CGRect){assetsButton_X, assetsButton_Y, assetsButton_W, assetsButton_H};
+    
+    [self.view addSubview:assetsButton];
 }
 
 - (void)didClickOpenWebViewButton:(UIButton *)button{
@@ -73,6 +92,27 @@
     } failure:^(NSURLSessionDataTask * _Nullable dataTask, NSError * _Nullable error) {
         [CXHUD showMsg:error.HUDMsg];
     }];
+}
+
+- (void)didClickAssetsPickerButton:(UIButton *)button{
+    CXAssetsPickerController *picker = [[CXAssetsPickerController alloc] initWithAssetsType:CXAssetsPhoto];
+    picker.enableMinimumCount = 1;
+    picker.enableMaximumCount = 9;
+    picker.delegate = self;
+    
+    [self presentViewController:picker animated:YES completion:nil];
+}
+
+- (void)assetsPickerController:(CXAssetsPickerController *)assetsPickerController
+        didFinishPickingAssets:(NSArray<PHAsset *> *)assets
+                    assetsType:(CXAssetsType)assetsType{
+    [CXAssetsImageManager requestImageDataForAssets:assets completion:^(NSArray<CXAssetsElementImage *> *images) {
+        
+    }];
+}
+
+- (void)didClickSettingButtonItem:(CXBarButtonItem *)buttonItem{
+    [CMSchemeHandler handleSchemeForModule:CMSchemeBusinessModuleCosmos page:CMSchemeBusinessSettingPage];
 }
 
 @end

@@ -95,7 +95,7 @@
     
     // 没有参数，就不签名
     if(allParams.count > 0){
-        NSString *sign = [CXSignUtil signWithDictionary:allParams
+        NSString *sign = [CXSignUtils signWithDictionary:allParams
                                              ignoreKeys:@[[CMURLRequestParams signParamKey]]
                                              privateKey:[CMURLRequestParams signPrivateKey]];
         [allParams cx_setValue:sign forKey:[CMURLRequestParams signParamKey]];
@@ -111,7 +111,7 @@
 + (void)registerSchemeSupporter {
     [[CXSchemeRegistrar sharedRegistrar] registerClass:self
                                           businessPage:CXSchemeBusinessWebPage
-                                                module:CXSchemeBusinessModuleApplication];
+                                                module:CMSchemeBusinessModuleCosmos];
 }
 
 @end

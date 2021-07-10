@@ -7,6 +7,7 @@
 
 #import "CMSchemeModuleRegistrar.h"
 #import "CMWebViewController.h"
+#import "CMSettingViewController.h"
 
 @implementation CMSchemeModuleRegistrar
 
@@ -16,6 +17,7 @@
 
 + (void)registerSchemeSupporterClass{
     [CMWebViewController registerSchemeSupporter];
+    [CMSettingViewController registerSchemeSupporter];
 }
 
 @end

@@ -14,7 +14,7 @@
 }
 
 + (NSString *)signPrivateKey{
-    return @"cosmos_app";
+    return @"cosmos";
 }
 
 + (NSDictionary<NSString *,id> *)commonParams{

@@ -69,11 +69,11 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>小宇宙需要您允许以使用相机进行拍照或扫描二维码</string>
+	<string>小宇宙需要你允许以使用相机进行拍照或扫描二维码</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>小宇宙需要您的允许以将图片保存到相册中，保存证件、动态照片</string>
+	<string>小宇宙需要你的允许以将图片保存到相册中，保存证件、动态照片</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>小宇宙需要您的允许以从相册中读取照片，用于上传证件、动态照片</string>
+	<string>小宇宙需要你的允许以从相册中读取照片，用于上传证件、动态照片</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

@@ -33,13 +33,13 @@
 - (void)setControllerNavigationStyleConfig {
     CXNavigationConfig *defaultStyle = [[CXNavigationConfig alloc] init];
     defaultStyle.titleFont = CX_PingFangSC_MediumFont(17.0);
-    defaultStyle.titleColor = CXHexIColor(0x353C43);
+    defaultStyle.titleColor = CXHexIColor(0x141414);
     defaultStyle.backgroundColor = [UIColor whiteColor];
     defaultStyle.subtitleFont = CX_PingFangSC_RegularFont(12.0);
     defaultStyle.itemTitleFont = CX_PingFangSC_RegularFont(14.0);
-    [defaultStyle setItemTitleColor:CXHexIColor(0x353C43) forState:UIControlStateNormal];
+    [defaultStyle setItemTitleColor:CXHexIColor(0x141414) forState:UIControlStateNormal];
     [defaultStyle setItemTitleColor:CXHexIColor(0x9099A1) forState:UIControlStateHighlighted];
-    [defaultStyle setItemTitleColor:CXHexIColor(0xCDD4DA) forState:UIControlStateDisabled];
+    [defaultStyle setItemTitleColor:CXHexIColor(0x9099A1) forState:UIControlStateDisabled];
     
     CXNavigationConfig *lightStyle = [[CXNavigationConfig alloc] init];
     lightStyle.titleFont = CX_PingFangSC_MediumFont(17.0);

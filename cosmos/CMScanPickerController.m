@@ -35,14 +35,14 @@
 }
 
 - (void)scanViewControllerDidCancel:(CMScanViewController *)scanViewController{
-    !self.completionBlock ?: self.completionBlock(self, CXPickerFinishStateCancelled, nil);
+    self.completionBlock(self, CXPickerFinishStateCancelled, nil);
     [self finish];
 }
 
 - (BOOL)scanViewController:(CMScanViewController *)scanViewController didFinishedWithQRCodeText:(NSString *)codeText error:(NSString **)error{
     [scanViewController dismissAnimated:YES completion:nil];
     
-    !self.completionBlock ?: self.completionBlock(self, CXPickerFinishStateSucceed, codeText);
+    self.completionBlock(self, CXPickerFinishStateSucceed, codeText);
     [self finish];
     return YES;
 }
