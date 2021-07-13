@@ -2,7 +2,7 @@
 //  CMSchemeHandler.m
 //  cosmos
 //
-//  Created by Michael Lynn on 2021/7/5.
+//  Created by wshaolin on 2021/7/5.
 //
 
 #import "CMSchemeHandler.h"
@@ -62,4 +62,5 @@
 
 CXSchemeBusinessModule const CMSchemeBusinessModuleCosmos = @"cosmos";
 
-CXSchemeBusinessPage const CMSchemeBusinessSettingPage = @"setting_page";
+CXSchemeBusinessPage const CMSchemeBusinessSettingPage = @"setting";
+CXSchemeBusinessPage const CMSchemeBusinessTimerPage = @"timer";

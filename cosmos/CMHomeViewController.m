@@ -2,7 +2,7 @@
 //  CMHomeViewController.m
 //  cosmos
 //
-//  Created by Michael Lynn on 2021/7/4.
+//  Created by wshaolin on 2021/7/4.
 //
 
 #import "CMHomeViewController.h"
@@ -26,50 +26,40 @@
     
     self.navigationBar.navigationItem.rightBarButtonItem = [[CXBarButtonItem alloc] initWithTitle:@"设置" target:self action:@selector(didClickSettingButtonItem:)];
     
-    UIButton *openButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [openButton setBackgroundColor:[UIColor colorWithWhite:0.8 alpha:1.0]];
-    [openButton setTitle:@"打开WebView" forState:UIControlStateNormal];
-    [openButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [openButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
-    [openButton addTarget:self action:@selector(didClickOpenWebViewButton:) forControlEvents:UIControlEventTouchUpInside];
+    [self addButtonWithTitle:@"打开WebView" action:@selector(didClickOpenWebViewButton:)];
+    [self addButtonWithTitle:@"测试网络请求" action:@selector(didClickVerifyRequestButton:)];
+    [self addButtonWithTitle:@"选择图片" action:@selector(didClickAssetsPickerButton:)];
+    [self addButtonWithTitle:@"玩转定时器" action:@selector(didClickTimerButton:)];
+}
+
+- (void)addButtonWithTitle:(NSString *)title action:(SEL)action{
+    __block CGRect frame = CGRectZero;
+    [self.view.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if([obj isKindOfClass:[UIButton class]]){
+            if(obj.frame.origin.y > frame.origin.y){
+                frame = obj.frame;
+            }
+        }
+    }];
     
-    CGFloat openButton_W = 150.0;
-    CGFloat openButton_H = 44.0;
-    CGFloat openButton_X = (CGRectGetWidth(self.view.bounds) - openButton_W) * 0.5;
-    CGFloat openButton_Y = CGRectGetMaxY(self.navigationBar.frame) + 50.0;
-    openButton.frame = (CGRect){openButton_X, openButton_Y, openButton_W, openButton_H};
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setBackgroundColor:[UIColor colorWithWhite:0.8 alpha:1.0]];
+    [button setTitle:title forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+    [button addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
     
-    [self.view addSubview:openButton];
+    if(CGRectEqualToRect(frame, CGRectZero)){
+        frame.size.width = 150.0;
+        frame.size.height = 44.0;
+        frame.origin.x = (CGRectGetWidth(self.view.bounds) - frame.size.width) * 0.5;
+        frame.origin.y = CGRectGetMaxY(self.navigationBar.frame) + 50.0;
+    }else{
+        frame.origin.y += frame.size.height + 20.0;
+    }
+    button.frame = frame;
     
-    UIButton *verifyButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [verifyButton setBackgroundColor:[UIColor colorWithWhite:0.8 alpha:1.0]];
-    [verifyButton setTitle:@"测试网络请求" forState:UIControlStateNormal];
-    [verifyButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [verifyButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
-    [verifyButton addTarget:self action:@selector(didClickVerifyRequestButton:) forControlEvents:UIControlEventTouchUpInside];
-    
-    CGFloat verifyButton_W = openButton_W;
-    CGFloat verifyButton_H = openButton_H;
-    CGFloat verifyButton_X = openButton_X;
-    CGFloat verifyButton_Y = CGRectGetMaxY(openButton.frame) + 20.0;
-    verifyButton.frame = (CGRect){verifyButton_X, verifyButton_Y, verifyButton_W, verifyButton_H};
-    
-    [self.view addSubview:verifyButton];
-    
-    UIButton *assetsButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [assetsButton setBackgroundColor:[UIColor colorWithWhite:0.8 alpha:1.0]];
-    [assetsButton setTitle:@"选择图片" forState:UIControlStateNormal];
-    [assetsButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [assetsButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
-    [assetsButton addTarget:self action:@selector(didClickAssetsPickerButton:) forControlEvents:UIControlEventTouchUpInside];
-    
-    CGFloat assetsButton_W = verifyButton_W;
-    CGFloat assetsButton_H = verifyButton_H;
-    CGFloat assetsButton_X = verifyButton_X;
-    CGFloat assetsButton_Y = CGRectGetMaxY(verifyButton.frame) + 20.0;
-    assetsButton.frame = (CGRect){assetsButton_X, assetsButton_Y, assetsButton_W, assetsButton_H};
-    
-    [self.view addSubview:assetsButton];
+    [self.view addSubview:button];
 }
 
 - (void)didClickOpenWebViewButton:(UIButton *)button{
@@ -95,7 +85,8 @@
 }
 
 - (void)didClickAssetsPickerButton:(UIButton *)button{
-    CXAssetsPickerController *picker = [[CXAssetsPickerController alloc] initWithAssetsType:CXAssetsPhoto];
+    CXAssetsPickerController *picker = [[CXAssetsPickerController alloc] initWithAssetsType:CXAssetsAll];
+    // picker.toolbarItemBackgroundColor = CXHexIColor(0x20AFFE);
     picker.enableMinimumCount = 1;
     picker.enableMaximumCount = 9;
     picker.delegate = self;
@@ -103,16 +94,23 @@
     [self presentViewController:picker animated:YES completion:nil];
 }
 
-- (void)assetsPickerController:(CXAssetsPickerController *)assetsPickerController
+- (void)didClickTimerButton:(UIButton *)button{
+    [CMSchemeHandler handleSchemeForModule:CMSchemeBusinessModuleCosmos
+                                      page:CMSchemeBusinessTimerPage];
+}
+
+- (void)assetsPickerController:(CXAssetsPickerController *)picker
         didFinishPickingAssets:(NSArray<PHAsset *> *)assets
                     assetsType:(CXAssetsType)assetsType{
-    [CXAssetsImageManager requestImageDataForAssets:assets completion:^(NSArray<CXAssetsElementImage *> *images) {
-        
-    }];
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    //    [CXAssetsImageManager requestImageDataForAssets:assets completion:^(NSArray<CXAssetsElementImage *> *images) {
+    //
+    //    }];
 }
 
 - (void)didClickSettingButtonItem:(CXBarButtonItem *)buttonItem{
-    [CMSchemeHandler handleSchemeForModule:CMSchemeBusinessModuleCosmos page:CMSchemeBusinessSettingPage];
+    [CMSchemeHandler handleSchemeForModule:CMSchemeBusinessModuleCosmos
+                                      page:CMSchemeBusinessSettingPage];
 }
 
 @end

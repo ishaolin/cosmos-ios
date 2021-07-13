@@ -31,6 +31,7 @@
 		9910B40C26948B02005E1800 /* CMScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9910B40B26948B02005E1800 /* CMScanViewController.m */; };
 		9910B40F26948B49005E1800 /* CMScanPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9910B40E26948B49005E1800 /* CMScanPickerController.m */; };
 		9910B4182694ADAE005E1800 /* CMURLRequestParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 9910B4172694ADAE005E1800 /* CMURLRequestParams.m */; };
+		994BF2CA269DCC7300B6A1AD /* CMTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 994BF2C9269DCC7300B6A1AD /* CMTimerViewController.m */; };
 		99F1B4E826982E39003066BE /* CMSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F1B4E726982E39003066BE /* CMSettingViewController.m */; };
 		C6C40E85596C922EACB35F4B /* libPods-cosmos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9AA3C870E72746188DBD8AF /* libPods-cosmos.a */; };
 /* End PBXBuildFile section */
@@ -79,6 +80,8 @@
 		9910B40E26948B49005E1800 /* CMScanPickerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMScanPickerController.m; sourceTree = "<group>"; };
 		9910B4162694ADAE005E1800 /* CMURLRequestParams.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMURLRequestParams.h; sourceTree = "<group>"; };
 		9910B4172694ADAE005E1800 /* CMURLRequestParams.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMURLRequestParams.m; sourceTree = "<group>"; };
+		994BF2C8269DCC7300B6A1AD /* CMTimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMTimerViewController.h; sourceTree = "<group>"; };
+		994BF2C9269DCC7300B6A1AD /* CMTimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMTimerViewController.m; sourceTree = "<group>"; };
 		99F1B4E626982E39003066BE /* CMSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMSettingViewController.h; sourceTree = "<group>"; };
 		99F1B4E726982E39003066BE /* CMSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMSettingViewController.m; sourceTree = "<group>"; };
 		D94D3A6B915747A918BF2DAF /* Pods-cosmos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cosmos.debug.xcconfig"; path = "Target Support Files/Pods-cosmos/Pods-cosmos.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +168,8 @@
 				9910B4172694ADAE005E1800 /* CMURLRequestParams.m */,
 				99F1B4E626982E39003066BE /* CMSettingViewController.h */,
 				99F1B4E726982E39003066BE /* CMSettingViewController.m */,
+				994BF2C8269DCC7300B6A1AD /* CMTimerViewController.h */,
+				994BF2C9269DCC7300B6A1AD /* CMTimerViewController.m */,
 			);
 			path = cosmos;
 			sourceTree = "<group>";
@@ -344,6 +349,7 @@
 				9910B3C426931867005E1800 /* main.m in Sources */,
 				9910B3E526931956005E1800 /* CMWebViewController.m in Sources */,
 				9910B3E9269329AA005E1800 /* CMBaseURLRequest.m in Sources */,
+				994BF2CA269DCC7300B6A1AD /* CMTimerViewController.m in Sources */,
 				9910B3EC269329CB005E1800 /* CMVerifyRequest.m in Sources */,
 				9910B3E326931956005E1800 /* CMSceneDelegate.m in Sources */,
 				9910B40026948A14005E1800 /* CMScanAnimationView.m in Sources */,

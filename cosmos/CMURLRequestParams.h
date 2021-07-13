@@ -2,7 +2,7 @@
 //  CMURLRequestParams.h
 //  cosmos
 //
-//  Created by Michael Lynn on 2021/7/6.
+//  Created by wshaolin on 2021/7/6.
 //
 
 #import <Foundation/Foundation.h>

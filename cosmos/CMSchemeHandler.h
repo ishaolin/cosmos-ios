@@ -2,7 +2,7 @@
 //  CMSchemeHandler.h
 //  cosmos
 //
-//  Created by Michael Lynn on 2021/7/5.
+//  Created by wshaolin on 2021/7/5.
 //
 
 #import <CXUIKit/CXUIKit.h>
@@ -30,3 +30,4 @@
 CX_UIKIT_EXTERN CXSchemeBusinessModule const CMSchemeBusinessModuleCosmos;
 
 CX_UIKIT_EXTERN CXSchemeBusinessPage const CMSchemeBusinessSettingPage;
+CX_UIKIT_EXTERN CXSchemeBusinessPage const CMSchemeBusinessTimerPage;

@@ -2,14 +2,14 @@
 //  CMOpenSDKDelegate.h
 //  cosmos
 //
-//  Created by Michael Lynn on 2021/7/6.
+//  Created by wshaolin on 2021/7/6.
 //
 
 #import <Foundation/Foundation.h>
 
 /* 微信 SDK */
-#if __has_include("WXApi.h")
-#import "WXApi.h"
+#if __has_include(<WechatOpenSDK/WXApi.h>)
+#import <WechatOpenSDK/WXApi.h>
 #define CM_INCLUDE_WECHAT_SDK
 #endif
 
