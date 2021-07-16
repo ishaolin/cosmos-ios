@@ -87,7 +87,7 @@
 }
 
 - (void)createWindowIfRequired {
-#if __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_13_0
+#if (defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_13_0)
     [self.class createWindow:self scene:nil];
 #endif
 }

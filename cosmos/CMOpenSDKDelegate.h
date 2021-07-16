@@ -20,7 +20,7 @@
 #endif
 
 /* QQ SDK */
-#if __has_include(<TencentOpenAPI/TencentOAuth.h>)
+#if __has_include(<TencentOpenAPI/TencentOpenApiUmbrellaHeader.h>)
 #import <TencentOpenAPI/TencentOpenApiUmbrellaHeader.h>
 #define CM_INCLUDE_QQ_SDK
 #endif

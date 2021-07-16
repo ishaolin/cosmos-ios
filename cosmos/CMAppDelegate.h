@@ -9,7 +9,7 @@
 
 @interface CMAppDelegate : UIResponder <UIApplicationDelegate>
 
-#if __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_13_0
+#if (defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_13_0)
 @property (nonatomic, strong) UIWindow *window;
 #endif
 
