@@ -9,9 +9,7 @@
 
 @interface CMAppDelegate : UIResponder <UIApplicationDelegate>
 
-#if (defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_13_0)
-@property (nonatomic, strong) UIWindow *window;
-#endif
+@property (nullable, nonatomic, strong) UIWindow *window;
 
 + (void)createWindow:(nonnull id)delegate scene:(nullable id)scene;
 

@@ -9,6 +9,6 @@
 
 @interface CMSceneDelegate : UIResponder <UIWindowSceneDelegate>
 
-@property (nonatomic, strong) UIWindow *window;
+@property (nullable, nonatomic, strong) UIWindow *window;
 
 @end
