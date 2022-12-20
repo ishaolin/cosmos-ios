@@ -15,7 +15,7 @@
 
 @property (nonatomic, strong) CMOpenSDKDelegate *weChatDelegate;
 @property (nonatomic, strong) CMOpenSDKDelegate *alipayDelegate;
-@property (nonatomic, strong) CMOpenSDKDelegate *QQDelegate;
+@property (nonatomic, strong) CMOpenSDKDelegate *qqDelegate;
 @property (nonatomic, strong) CMOpenSDKDelegate *weiboDelegate;
 
 @end
@@ -40,13 +40,13 @@
     return _alipayDelegate;
 }
 
-- (CMOpenSDKDelegate *)QQDelegate{
+- (CMOpenSDKDelegate *)qqDelegate{
 #ifdef CM_INCLUDE_WECHAT_SDK
-    if(!_QQDelegate){
-        _QQDelegate = [[CMOpenQQDelegate alloc] initWithDelegate:self];
+    if(!_qqDelegate){
+        _qqDelegate = [[CMOpenQQDelegate alloc] initWithDelegate:self];
     }
 #endif
-    return _QQDelegate;
+    return _qqDelegate;
 }
 
 - (CMOpenSDKDelegate *)weiboDelegate{
@@ -81,49 +81,26 @@
 }
 
 - (void)handleOpenURL:(NSURL *)url{
-    // 支付宝支付 | 银联支付
-    if([url.scheme isEqualToString:SCHEME_ALIPAY]){
+    if([url.scheme isEqualToString:SCHEME_ALIPAY]){ // 支付宝支付 | 银联支付
         if([url.host isEqualToString:@"safepay"]){ // 支付宝
             [[CXPayService defaultService] handleAlipayOpenURL:url];
         }else{ // 银联
             [[CXPayService defaultService] handleUnionPayOpenURL:url];
         }
+    }else if([url.scheme isEqualToString:@""]){ // 支付宝登录授权
         
-        return;
-    }
-    
-    // 支付宝登录授权
-    if([url.scheme isEqualToString:@""]){
-        return;
-    }
-    
-    // 支付宝分享
-    if([url.scheme isEqualToString:@"alipayshare"]){
-        // alipayshare是固定的
+    }else if([url.scheme isEqualToString:@"alipayshare"]){ // 支付宝分享，alipayshare是固定的
         [self handleAlipayOpenURL:url universalLink:nil];
-        return;
-    }
-    
-    // 微信分享 | 微信登录 | 微信支付
-    if([url.scheme isEqualToString:@"WECHAT_SHARE_APP_KEY"] ||
-       [url.scheme isEqualToString:@"WECHAT_LOGIN_APP_KEY"] ||
-       [url.scheme isEqualToString:@"WECHAT_PAY_APP_KEY_1"] ||
-       [url.scheme isEqualToString:@"WECHAT_PAY_APP_KEY_2"] ||
-       [url.scheme isEqualToString:@"WECHAT_PAY_APP_KEY_3"]){
+    }else if([url.scheme isEqualToString:@"WECHAT_SHARE_APP_KEY"] ||
+             [url.scheme isEqualToString:@"WECHAT_LOGIN_APP_KEY"] ||
+             [url.scheme isEqualToString:@"WECHAT_PAY_APP_KEY_1"] ||
+             [url.scheme isEqualToString:@"WECHAT_PAY_APP_KEY_2"] ||
+             [url.scheme isEqualToString:@"WECHAT_PAY_APP_KEY_3"]){ // 微信分享 | 微信登录 | 微信支付
         [self handleWechatOpenURL:url universalLink:nil];
-        return;
-    }
-    
-    // QQ分享
-    if([url.scheme isEqualToString:@"WECHAT_SHARE_APP_KEY"]){
+    }else if([url.scheme isEqualToString:@"WECHAT_SHARE_APP_KEY"]){ // QQ分享
         [self handleQQOpenURL:url universalLink:nil];
-        return;
-    }
-    
-    // 微博分享
-    if([url.scheme isEqualToString:@"WECHAT_SHARE_APP_KEY"]){
+    }else if([url.scheme isEqualToString:@"WECHAT_SHARE_APP_KEY"]){ // 微博分享
         [self handleWeiboOpenURL:url universalLink:nil];
-        return;
     }
 }
 
@@ -158,7 +135,7 @@
 
 - (void)handleQQOpenURL:(NSURL *)url universalLink:(NSUserActivity *)userActivity{
 #ifdef CM_INCLUDE_QQ_SDK
-    id<QQApiInterfaceDelegate> delegate = (id<QQApiInterfaceDelegate>)self.QQDelegate;
+    id<QQApiInterfaceDelegate> delegate = (id<QQApiInterfaceDelegate>)self.qqDelegate;
     if(userActivity){
         [QQApiInterface handleOpenUniversallink:userActivity.webpageURL delegate:delegate];
     }else{

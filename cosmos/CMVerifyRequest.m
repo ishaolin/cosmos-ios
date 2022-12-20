@@ -14,7 +14,7 @@
 }
 
 - (NSString *)path{
-    return @"/assist/user/verify";
+    return @"/assist/xx/user/verify";
 }
 
 - (CXHTTPMethod)method{
