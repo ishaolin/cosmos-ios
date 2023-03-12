@@ -9,7 +9,9 @@
 #import "CMLocalHTMLController.h"
 #import "CMVerifyRequest.h"
 #import <CXAssetsPicker/CXAssetsPicker.h>
+#import <CXAntiSDK/CXAntiSDK.h>
 #import "CMSchemeHandler.h"
+#import "cosmos-Swift.h"
 
 @interface CMHomeViewController ()<UINavigationControllerDelegate, CXAssetsPickerControllerDelegate>{
     
@@ -24,7 +26,7 @@
     
     self.title = @"首页";
     
-    self.navigationBar.navigationItem.rightBarButtonItem = [[CXBarButtonItem alloc] initWithTitle:@"设置" target:self action:@selector(didClickSettingButtonItem:)];
+    self.navigationBar.navigationItem.rightBarButtonItem = [[CXBarButtonItem alloc] initWithTitle:@"打开页面" target:self action:@selector(didClickSettingButtonItem:)];
     
     [self addButtonWithTitle:@"打开WebView" action:@selector(didClickOpenWebViewButton:)];
     [self addButtonWithTitle:@"测试网络请求" action:@selector(didClickVerifyRequestButton:)];
@@ -63,14 +65,23 @@
 }
 
 - (void)didClickOpenWebViewButton:(UIButton *)button{
-    CMLocalHTMLController *webViewController = [[CMLocalHTMLController alloc] init];
+    WebViewController *webViewController = [[WebViewController alloc] init];
+    //CMLocalHTMLController *webViewController = [[CMLocalHTMLController alloc] init];
+    
     [self.navigationController pushViewController:webViewController animated:YES];
 }
 
 - (void)didClickVerifyRequestButton:(UIButton *)button{
     CMVerifyRequest *request = [[CMVerifyRequest alloc] init];
-    [request addParam:@"18612580920" forKey:@"mobile"];
-    [request addParam:[CXUCryptor MD5:@"123456"] forKey:@"auth_code"];
+    request.signKey = @"sign";
+    NSString *password = [CXUCryptor MD5:@"pj123"];
+    NSString *data = [CXRSAUtils encrypt:password publicKey:@"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDPuYdrnfdtY/qh+QaM/9GbypSPVfR+Th7xKZoLOw1OhDOM2J4UyQv41ZsMhEJvbTCKDhdAWhwDg6fPQr5jJ9zScafQAtNuLn+NBaR2Aoxc7rUc0IfLfBKbXhBg+pj16l94eocnPRI3FoS21ggi1XWwzqRX46NGMuQmeuktI6adbwIDAQAB"];
+    
+    [request addParam:@"19808829215" forKey:@"mobilePhone"];
+    [request addParam:data forKey:@"passWord"];
+    [request addParam:@"172071027e0127e0170" forKey:@"requestId"];
+    //[request addParam:@"" forKey:@"sign"];
+    //[request addParam:@"" forKey:@"smsCode"];
     [CXHUD showHUD];
     [request loadRequestWithSuccess:^(NSURLSessionDataTask * _Nonnull dataTask, id  _Nullable data) {
         CMVerifyModel *model = (CMVerifyModel *)data;
@@ -82,6 +93,11 @@
     } failure:^(NSURLSessionDataTask * _Nullable dataTask, NSError * _Nullable error) {
         [CXHUD showMsg:error.HUDMsg];
     }];
+    
+    
+    //    [VerifyUtils verifyWithMobile:@"18612580920" authCode:[CXUCryptor MD5:@"123456"] closure:^(NSString * _Nonnull message) {
+    //        [CXHUD showMsg:message];
+    //    }];
 }
 
 - (void)didClickAssetsPickerButton:(UIButton *)button{
@@ -95,8 +111,7 @@
 }
 
 - (void)didClickTimerButton:(UIButton *)button{
-    [CMSchemeHandler handleSchemeForModule:CMSchemeBusinessModuleCosmos
-                                      page:CMSchemeBusinessTimerPage];
+    [CMSchemeHandler handleSchemeForModule:CMSchemeBusinessModuleCosmos page:CMSchemeBusinessTimerPage];
 }
 
 - (void)assetsPickerController:(CXAssetsPickerController *)picker
@@ -109,8 +124,8 @@
 }
 
 - (void)didClickSettingButtonItem:(CXBarButtonItem *)buttonItem{
-    [CMSchemeHandler handleSchemeForModule:CMSchemeBusinessModuleCosmos
-                                      page:CMSchemeBusinessSettingPage];
+    [Swifts testOpenPageFrom:self];
+    //[CMSchemeHandler handleSchemeForModule:CMSchemeBusinessModuleCosmos page:CMSchemeBusinessSettingPage];
 }
 
 @end

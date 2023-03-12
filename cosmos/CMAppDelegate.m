@@ -31,6 +31,7 @@
 }
 
 - (void)setControllerNavigationStyleConfig {
+    
     CXNavigationConfig *defaultStyle = [[CXNavigationConfig alloc] init];
     defaultStyle.titleFont = CX_PingFangSC_MediumFont(17.0);
     defaultStyle.titleColor = CXHexIColor(0x141414);

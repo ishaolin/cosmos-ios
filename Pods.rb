@@ -49,6 +49,23 @@ def pod_custom_libs(mode)
     end
 end
 
+def pod_custom_libs2()
+    libs = [
+        'HandyHTTP',
+        'Common',
+        'CommonUI'
+    ]
+    
+    libs.each do | lib |
+        path = "../../YingXi/Pods/#{lib}/#{lib}.podspec"
+        if File.exist?(path)
+            pod lib, :path => path
+        else
+            pod lib
+        end
+    end
+end
+
 def pod_debug_libs()
     libs = {
         'Reveal-SDK' => '24' # UI结构查看工具
@@ -72,7 +89,8 @@ end
 def pod_libs(mode = POD_MODE_TEST)
     pod_github_libs
     pod_custom_libs(mode)
-    
+    pod_custom_libs2
+
     case mode
         when POD_MODE_DEV
             pod_debug_libs

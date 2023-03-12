@@ -9,6 +9,7 @@
 #import "CMWebViewController.h"
 #import "CMSettingViewController.h"
 #import "CMTimerViewController.h"
+#import "cosmos-Swift.h"
 
 @implementation CMSchemeModuleRegistrar
 
@@ -18,7 +19,7 @@
 
 + (void)registerSchemeSupporterClass{
     [CMWebViewController registerSchemeSupporter];
-    [CMSettingViewController registerSchemeSupporter];
+    [SettingViewController registerSchemeSupporter];
     [CMTimerViewController registerSchemeSupporter];
 }
 

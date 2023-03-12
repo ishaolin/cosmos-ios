@@ -43,7 +43,7 @@
         }];
     }];
     
-    [self registerHandler:@"getParamsSignature1" handler:^(NSDictionary<NSString *, id> *data, CXWebViewBridgeCallback callback) {
+    [self registerHandler:@"getParamsSignature" handler:^(NSDictionary<NSString *, id> *data, CXWebViewBridgeCallback callback) {
         @strongify(self);
         callback([self signatureParams:data]);
     }];
@@ -111,7 +111,7 @@
 + (void)registerSchemeSupporter {
     [[CXSchemeRegistrar sharedRegistrar] registerClass:self
                                           businessPage:CXSchemeBusinessWebPage
-                                                module:CMSchemeBusinessModuleCosmos];
+                                                module:CXSchemeBusinessModuleApplication];
 }
 
 @end

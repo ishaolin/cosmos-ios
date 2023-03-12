@@ -33,6 +33,11 @@
 		9910B4182694ADAE005E1800 /* CMURLRequestParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 9910B4172694ADAE005E1800 /* CMURLRequestParams.m */; };
 		994BF2CA269DCC7300B6A1AD /* CMTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 994BF2C9269DCC7300B6A1AD /* CMTimerViewController.m */; };
 		994BF2D526A0A58700B6A1AD /* CMTimeFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 994BF2D326A0A58600B6A1AD /* CMTimeFormatter.m */; };
+		995F925529B185EA00AA1151 /* VerifyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995F925429B185EA00AA1151 /* VerifyUtils.swift */; };
+		995F925D29B1EF0800AA1151 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995F925C29B1EF0800AA1151 /* SettingViewController.swift */; };
+		99CC344929B4954C009DF04B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CC344829B4954C009DF04B /* WebViewController.swift */; };
+		99CC344C29B499E2009DF04B /* CMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CC344B29B499E1009DF04B /* CMBaseViewController.m */; };
+		99F1305829B9B4C600434C93 /* Swifts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F1305729B9B4C600434C93 /* Swifts.swift */; };
 		99F1B4E826982E39003066BE /* CMSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F1B4E726982E39003066BE /* CMSettingViewController.m */; };
 		C6C40E85596C922EACB35F4B /* libPods-cosmos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9AA3C870E72746188DBD8AF /* libPods-cosmos.a */; };
 /* End PBXBuildFile section */
@@ -85,6 +90,13 @@
 		994BF2C9269DCC7300B6A1AD /* CMTimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMTimerViewController.m; sourceTree = "<group>"; };
 		994BF2D326A0A58600B6A1AD /* CMTimeFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMTimeFormatter.m; sourceTree = "<group>"; };
 		994BF2D426A0A58600B6A1AD /* CMTimeFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMTimeFormatter.h; sourceTree = "<group>"; };
+		995F924A29B0A0D200AA1151 /* cosmos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cosmos-Bridging-Header.h"; sourceTree = "<group>"; };
+		995F925429B185EA00AA1151 /* VerifyUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyUtils.swift; sourceTree = "<group>"; };
+		995F925C29B1EF0800AA1151 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		99CC344829B4954C009DF04B /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		99CC344A29B499E1009DF04B /* CMBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMBaseViewController.h; sourceTree = "<group>"; };
+		99CC344B29B499E1009DF04B /* CMBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMBaseViewController.m; sourceTree = "<group>"; };
+		99F1305729B9B4C600434C93 /* Swifts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swifts.swift; sourceTree = "<group>"; };
 		99F1B4E626982E39003066BE /* CMSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMSettingViewController.h; sourceTree = "<group>"; };
 		99F1B4E726982E39003066BE /* CMSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMSettingViewController.m; sourceTree = "<group>"; };
 		D94D3A6B915747A918BF2DAF /* Pods-cosmos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cosmos.debug.xcconfig"; path = "Target Support Files/Pods-cosmos/Pods-cosmos.debug.xcconfig"; sourceTree = "<group>"; };
@@ -175,6 +187,13 @@
 				994BF2D326A0A58600B6A1AD /* CMTimeFormatter.m */,
 				994BF2C8269DCC7300B6A1AD /* CMTimerViewController.h */,
 				994BF2C9269DCC7300B6A1AD /* CMTimerViewController.m */,
+				995F924A29B0A0D200AA1151 /* cosmos-Bridging-Header.h */,
+				995F925429B185EA00AA1151 /* VerifyUtils.swift */,
+				995F925C29B1EF0800AA1151 /* SettingViewController.swift */,
+				99CC344829B4954C009DF04B /* WebViewController.swift */,
+				99CC344A29B499E1009DF04B /* CMBaseViewController.h */,
+				99CC344B29B499E1009DF04B /* CMBaseViewController.m */,
+				99F1305729B9B4C600434C93 /* Swifts.swift */,
 			);
 			path = cosmos;
 			sourceTree = "<group>";
@@ -236,10 +255,11 @@
 		9910B3A626931862005E1800 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					9910B3AD26931862005E1800 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1320;
 					};
 				};
 			};
@@ -345,11 +365,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9910B3F4269430C8005E1800 /* CMSharedPayHandler.m in Sources */,
+				99CC344929B4954C009DF04B /* WebViewController.swift in Sources */,
 				994BF2D526A0A58700B6A1AD /* CMTimeFormatter.m in Sources */,
 				9910B4182694ADAE005E1800 /* CMURLRequestParams.m in Sources */,
 				9910B40C26948B02005E1800 /* CMScanViewController.m in Sources */,
 				9910B40F26948B49005E1800 /* CMScanPickerController.m in Sources */,
 				9910B3DF26931955005E1800 /* CMLocalHTMLController.m in Sources */,
+				995F925D29B1EF0800AA1151 /* SettingViewController.swift in Sources */,
 				9910B3E426931956005E1800 /* CMSchemeModuleRegistrar.m in Sources */,
 				99F1B4E826982E39003066BE /* CMSettingViewController.m in Sources */,
 				9910B3C426931867005E1800 /* main.m in Sources */,
@@ -357,10 +379,13 @@
 				9910B3E9269329AA005E1800 /* CMBaseURLRequest.m in Sources */,
 				994BF2CA269DCC7300B6A1AD /* CMTimerViewController.m in Sources */,
 				9910B3EC269329CB005E1800 /* CMVerifyRequest.m in Sources */,
+				99F1305829B9B4C600434C93 /* Swifts.swift in Sources */,
 				9910B3E326931956005E1800 /* CMSceneDelegate.m in Sources */,
 				9910B40026948A14005E1800 /* CMScanAnimationView.m in Sources */,
+				99CC344C29B499E2009DF04B /* CMBaseViewController.m in Sources */,
 				9910B3DE26931955005E1800 /* CMSchemeHandler.m in Sources */,
 				9910B3FD26944C03005E1800 /* CMOpenSDKDelegate.m in Sources */,
+				995F925529B185EA00AA1151 /* VerifyUtils.swift in Sources */,
 				9910B3DD26931955005E1800 /* CMHomeViewController.m in Sources */,
 				9910B3E626931956005E1800 /* CMAppDelegate.m in Sources */,
 			);
@@ -384,6 +409,7 @@
 		9910B3C526931867005E1800 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -417,6 +443,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -433,17 +460,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		9910B3C626931867005E1800 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -477,6 +506,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -487,10 +517,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -501,6 +533,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7XQ533L8PG;
 				ENABLE_BITCODE = NO;
@@ -511,6 +545,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.study.cosmos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "cosmos/cosmos-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -521,6 +559,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7XQ533L8PG;
 				ENABLE_BITCODE = NO;
@@ -531,6 +571,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.study.cosmos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "cosmos/cosmos-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

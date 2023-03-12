@@ -10,11 +10,11 @@
 @implementation CMVerifyRequest
 
 - (NSString *)baseURL{
-    return @"http://47.108.237.77";
+    return @"http://application.yxjt.vip/auth";
 }
 
 - (NSString *)path{
-    return @"/assist/xx/user/verify";
+    return @"/api/user/v1/phone_login";
 }
 
 - (CXHTTPMethod)method{
