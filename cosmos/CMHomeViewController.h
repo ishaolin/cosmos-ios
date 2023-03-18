@@ -7,6 +7,6 @@
 
 #import <CXUIKit/CXUIKit.h>
 
-@interface CMHomeViewController : CXErrorViewController
+@interface CMHomeViewController : CXFailureViewController
 
 @end

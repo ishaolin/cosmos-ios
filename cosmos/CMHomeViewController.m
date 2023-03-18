@@ -9,7 +9,6 @@
 #import "CMLocalHTMLController.h"
 #import "CMVerifyRequest.h"
 #import <CXAssetsPicker/CXAssetsPicker.h>
-#import <CXAntiSDK/CXAntiSDK.h>
 #import "CMSchemeHandler.h"
 
 @interface CMHomeViewController ()<UINavigationControllerDelegate, CXAssetsPickerControllerDelegate>{
@@ -25,7 +24,7 @@
     
     self.title = @"首页";
     
-    self.navigationBar.navigationItem.rightBarButtonItem = [[CXBarButtonItem alloc] initWithTitle:@"打开页面" target:self action:@selector(didClickSettingButtonItem:)];
+    self.navigationBar.navigationItem.rightBarButtonItem = [[CXBarButtonItem alloc] initWithTitle:@"设置" target:self action:@selector(didClickSettingButtonItem:)];
     
     [self addButtonWithTitle:@"打开WebView" action:@selector(didClickOpenWebViewButton:)];
     [self addButtonWithTitle:@"测试网络请求" action:@selector(didClickVerifyRequestButton:)];
