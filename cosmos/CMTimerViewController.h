@@ -5,8 +5,8 @@
 //  Created by wshaolin on 2021/7/13.
 //
 
-#import <CXUIKit/CXUIKit.h>
+#import "CMBaseViewController.h"
 
-@interface CMTimerViewController : CXBaseViewController<CXSchemeSupporter>
+@interface CMTimerViewController : CMBaseViewController<CXSchemeSupporter>
 
 @end

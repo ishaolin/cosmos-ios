@@ -5,7 +5,7 @@
 //  Created by wshaolin on 2021/7/6.
 //
 
-#import <CXUIKit/CXUIKit.h>
+#import "CMBaseViewController.h"
 
 @class CMScanViewController;
 
@@ -21,7 +21,7 @@
 
 @end
 
-@interface CMScanViewController : CXBaseViewController
+@interface CMScanViewController : CMBaseViewController
 
 @property (nonatomic, weak) id<CMScanViewControllerDelegate> delegate;
 

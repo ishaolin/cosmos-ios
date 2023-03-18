@@ -6,7 +6,6 @@
 //
 
 #import "CMTimerViewController.h"
-#import "CMSchemeHandler.h"
 #import "CMTimeFormatter.h"
 
 @interface CMTimerViewController () {

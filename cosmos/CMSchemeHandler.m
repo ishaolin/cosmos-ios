@@ -61,6 +61,6 @@
 @end
 
 CXSchemeBusinessModule const CMSchemeBusinessModuleCosmos = @"cosmos";
-
 CXSchemeBusinessPage const CMSchemeBusinessSettingPage = @"setting";
 CXSchemeBusinessPage const CMSchemeBusinessTimerPage = @"timer";
+CXSchemeBusinessPage const CMSchemeBusinessImagePlayerPage = @"image_player";

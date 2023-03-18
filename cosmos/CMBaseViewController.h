@@ -6,6 +6,7 @@
 //
 
 #import <CXUIKit/CXUIKit.h>
+#import "CMSchemeHandler.h"
 
 @interface CMBaseViewController : CXBaseViewController
 

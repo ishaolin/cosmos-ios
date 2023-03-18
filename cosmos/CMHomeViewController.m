@@ -11,7 +11,6 @@
 #import <CXAssetsPicker/CXAssetsPicker.h>
 #import <CXAntiSDK/CXAntiSDK.h>
 #import "CMSchemeHandler.h"
-#import "cosmos-Swift.h"
 
 @interface CMHomeViewController ()<UINavigationControllerDelegate, CXAssetsPickerControllerDelegate>{
     
@@ -32,6 +31,7 @@
     [self addButtonWithTitle:@"测试网络请求" action:@selector(didClickVerifyRequestButton:)];
     [self addButtonWithTitle:@"选择图片" action:@selector(didClickAssetsPickerButton:)];
     [self addButtonWithTitle:@"玩转定时器" action:@selector(didClickTimerButton:)];
+    [self addButtonWithTitle:@"图片轮播器" action:@selector(didClickImagePlayerButton:)];
 }
 
 - (void)addButtonWithTitle:(NSString *)title action:(SEL)action{
@@ -65,23 +65,15 @@
 }
 
 - (void)didClickOpenWebViewButton:(UIButton *)button{
-    WebViewController *webViewController = [[WebViewController alloc] init];
-    //CMLocalHTMLController *webViewController = [[CMLocalHTMLController alloc] init];
-    
+    CMLocalHTMLController *webViewController = [[CMLocalHTMLController alloc] init];
     [self.navigationController pushViewController:webViewController animated:YES];
 }
 
 - (void)didClickVerifyRequestButton:(UIButton *)button{
     CMVerifyRequest *request = [[CMVerifyRequest alloc] init];
-    request.signKey = @"sign";
-    NSString *password = [CXUCryptor MD5:@"pj123"];
-    NSString *data = [CXRSAUtils encrypt:password publicKey:@"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDPuYdrnfdtY/qh+QaM/9GbypSPVfR+Th7xKZoLOw1OhDOM2J4UyQv41ZsMhEJvbTCKDhdAWhwDg6fPQr5jJ9zScafQAtNuLn+NBaR2Aoxc7rUc0IfLfBKbXhBg+pj16l94eocnPRI3FoS21ggi1XWwzqRX46NGMuQmeuktI6adbwIDAQAB"];
+    [request addParam:@"18612580920" forKey:@"mobile"];
+    [request addParam:@"e10adc3949ba59abbe56e057f20f883e" forKey:@"auth_code"];
     
-    [request addParam:@"19808829215" forKey:@"mobilePhone"];
-    [request addParam:data forKey:@"passWord"];
-    [request addParam:@"172071027e0127e0170" forKey:@"requestId"];
-    //[request addParam:@"" forKey:@"sign"];
-    //[request addParam:@"" forKey:@"smsCode"];
     [CXHUD showHUD];
     [request loadRequestWithSuccess:^(NSURLSessionDataTask * _Nonnull dataTask, id  _Nullable data) {
         CMVerifyModel *model = (CMVerifyModel *)data;
@@ -93,11 +85,6 @@
     } failure:^(NSURLSessionDataTask * _Nullable dataTask, NSError * _Nullable error) {
         [CXHUD showMsg:error.HUDMsg];
     }];
-    
-    
-    //    [VerifyUtils verifyWithMobile:@"18612580920" authCode:[CXUCryptor MD5:@"123456"] closure:^(NSString * _Nonnull message) {
-    //        [CXHUD showMsg:message];
-    //    }];
 }
 
 - (void)didClickAssetsPickerButton:(UIButton *)button{
@@ -124,8 +111,11 @@
 }
 
 - (void)didClickSettingButtonItem:(CXBarButtonItem *)buttonItem{
-    [Swifts testOpenPageFrom:self];
-    //[CMSchemeHandler handleSchemeForModule:CMSchemeBusinessModuleCosmos page:CMSchemeBusinessSettingPage];
+    [CMSchemeHandler handleSchemeForModule:CMSchemeBusinessModuleCosmos page:CMSchemeBusinessSettingPage];
+}
+
+- (void)didClickImagePlayerButton:(UIButton *)button{
+    [CMSchemeHandler handleSchemeForModule:CMSchemeBusinessModuleCosmos page:CMSchemeBusinessImagePlayerPage];
 }
 
 @end
